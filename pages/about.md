@@ -15,6 +15,8 @@ permalink: /about/
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
 
+* [Contact me](wuchuanxun@outlook.com)
+
 ## Skill Keywords
 
 {% for category in site.data.skills %}
