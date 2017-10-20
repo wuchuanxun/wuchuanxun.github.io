@@ -61,7 +61,6 @@ gems:
 #     - jekyll-html-pipeline
     - jekyll-paginate
     - jekyll-sitemap
-    - jekyll-feed
     - jemoji
 
 repository: wuchuanxun/wuchuanxun.github.io
