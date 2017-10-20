@@ -7,15 +7,14 @@ menu: 关于
 permalink: /about/
 ---
 
-我是学习小天使，学习使我快乐
+我是学习小天使，学习使我快乐 
 
 ## 联系
 
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
-{% endfor %}
-
-* [Contact me](wuchuanxun@outlook.com)
+  {% endfor %}
+* Contact me:  <wuchuanxun@outlook.com>
 
 ## Skill Keywords
 
