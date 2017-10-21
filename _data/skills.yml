@@ -1,9 +1,8 @@
-- name: Software Engineer Keywords
+- name: Code Skill
   keywords:
       - C#
       - Python
-      - Matlab
 
-- name: Mobile Developer Keywords
+- name: 3D Modeling
   keywords:
-      - Android
+      - UG
