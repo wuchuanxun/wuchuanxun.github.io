@@ -11,7 +11,7 @@ keywords: BloG, Chuanxun Wu
 favicon: /Mechanical.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
-side_bar_repo_limit: 5
+side_bar_repo_limit: 3
 
 # ---------------- #
 #      Author      #
