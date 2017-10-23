@@ -6,8 +6,6 @@ description: Data sampling
 keywords: Sampling, Error
 ---
 
-## Definition
-
 Quantization error is the **difference** between the **analog signal and the closest available digital value** at each sampling instant from A/D converter. Quantization error also introduces noise,to the sample signal. 
 
 ## Relations
@@ -18,7 +16,7 @@ The higher the resolution of A/D converter, the lower the quantization error and
 
 The following figure shows how an analog signal gets quantized. The blue line represents analog signal while the brown one represents the quantized signal. 
 
-<center>![quantization](../images/DSP/Quantization_error/quantization.jpg)</center>
+<center><img src="../images/DSP/Quantization_error/quantization.jpg" class="inline"></center>
 
 Both **sampling and quantization** result in the loss of information. The quantity of a Quantizer output depends upon the number of quantization levels used. The discrete amplitudes of quantized output are called as **representation levels or reconstruction levels**. The spacing between the  two adjacent(相邻的) representation levels is called a **quantum or step-size**.
 
@@ -30,7 +28,7 @@ The type of quantization in which the quantization levels are uniformly spaced i
 
 There are two types of uniform quantization:
 
-<center>![quantization_types](../images/DSP/Quantization_error/quantization_types.jpg)</center>
+<center><img src="../images/DSP/Quantization_error/quantization_types.jpg" class="inline"></center>
 
 Figure 1 shows the mid-rise type and figure 2 shows the mid-tread type of uniform quantization.
 
@@ -52,9 +50,9 @@ xi=linspace(-2*eps(q),2*eps(q),256);  %取了两个误差长度的区间
 
 %Fix: Round Towards Zero. Ther are floor,ceil,nearest,convergent for choise
 q = quantizer('fix',[8 7]);
-err = quantize(q,u) - u;		%量化并求取误差
-f_t = errpdf(q,xi);				%the probability density function f
-mu_t = errmean(q);				%误差均值
+err = quantize(q,u) - u; 		%量化并求取误差
+f_t = errpdf(q,xi); 			%the probability density function f
+mu_t = errmean(q); 				%误差均值
 v_t  = errvar(q);
 
 fidemo.qerrordemoplot(q,f_t,xi,mu_t,v_t,err) %plot errpdf and err relation
