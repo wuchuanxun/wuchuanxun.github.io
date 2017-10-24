@@ -58,6 +58,17 @@ v_t  = errvar(q);
 fidemo.qerrordemoplot(q,f_t,xi,mu_t,v_t,err) %plot errpdf and err relation
 ```
 
+{% set previous = page %}
+{% for pg in pages %}
+    {% if pg.category == page.category %}
+        {% if pg.weight < page.weight %}
+            {% set previous = pg %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+previous: {{previous.title}}
+
 <p align="right">
 <button class="btn btn-outline" type="button" onclick=window.location.href="2017-10-24-FFT.md">Next:FFT</button>
 </p>
