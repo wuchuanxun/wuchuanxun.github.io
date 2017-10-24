@@ -32,6 +32,8 @@ layout: default
     <article class="article-content markdown-body">
     {{ content }}
     </article>
+    <input type="button" value="prev" align="left" onclick="location.href='{{page.prev}}'">
+    <input type="button" value="next" align="right" onclick="location.href='{{page.next}}'">
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
