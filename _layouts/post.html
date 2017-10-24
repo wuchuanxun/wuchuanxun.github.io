@@ -32,14 +32,20 @@ layout: default
     <article class="article-content markdown-body">
     {{ content }}
     </article>
-    <a>
-      <p align="left">
-        <button class="btn btn-outline" type="button" onclick="location.href="{{page.previous_page_path}}">Pre: {{page.prev.title}}</button>
-      </p>
-      <p align="right">
-        <button class="btn btn-outline" type="button" onclick="location.href="{{page.next_page_path}}">Next: {{page.next.title}}</button>
-      </p>
-    </a>
+    <div class="pagination">
+        <ul>
+          {% if page.previous %}
+            <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇: {{ page.previous.title }}</a></li>
+          {% else %}
+            <li class="prev disabled"><a>&laquo; 上一篇: 无</a></li>
+          {% endif %}
+          {% if page.next %}
+            <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &raquo;</a></li>
+          {% else %}
+            <li class="next disabled"><a>下一篇: 无 &raquo;</a>
+          {% endif %}
+        </ul>
+    </div>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
