@@ -36,7 +36,9 @@ layout: default
         <ul>
           {% if page.previous %}
             {% if page.previous.categories == page.categories %}
-              <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇: {{ page.previous.title }}</a></li>
+              <button class="btn btn-outline" type="button">
+                <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">上一篇: {{ page.previous.title }}</a>
+              </button>
             {% endif %}
           {% endif %}
           {% if page.next %}
@@ -46,14 +48,6 @@ layout: default
           {% endif %}
         </ul>
     </div>
-    <a>
-      <p align="left">
-        <button class="btn btn-outline" type="button" onclick="location.href='{{ BASE_PATH }}{{ page.previous.url }}'">Pre: {{page.previous.title}}</button>
-      </p>
-      <p align="right">
-        <button class="btn btn-outline" type="button" onclick="location.href="{{page.next_page_path}}">Next: {{page.next.title}}</button>
-      </p>
-    </a>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
