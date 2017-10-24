@@ -50,6 +50,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
+mathjax: true
 paginate: 8
 lsi: false
 quiet: false
