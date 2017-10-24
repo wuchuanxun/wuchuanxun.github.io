@@ -33,20 +33,16 @@ layout: default
     {{ content }}
     </article>
     <div class="pagination">
-        {% set previous = page %}
-        {% for pg in pages %}
-            {% if pg.category == page.category %}
-                {% if pg.weight < page.weight %}
-                    {% set previous = pg %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
         <ul>
-          {% if previous.category != page.category %}
-            <li class="prev"><a href="{{ BASE_PATH }}{{ previous.url }}" title="{{ previous.title }}">&laquo; 上一篇: {{ previous.title }}</a></li>
+          {% if page.previous %}
+            {% if page.previous.categories == page.categories %}
+              <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇: {{ page.previous.title }}</a></li>
+            {% endif %}
           {% endif %}
           {% if page.next %}
-            <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &raquo;</a></li>
+            {% if page.next.categories == page.categories %}
+              <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &raquo;</a></li>
+            {% endif %}
           {% endif %}
         </ul>
     </div>
