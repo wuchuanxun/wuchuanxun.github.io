@@ -35,14 +35,18 @@ layout: default
     <div class="pagination">
         <ul>
           {% if page.previous %}
+          	<p align="left">
             <button class="btn btn-outline" type="button">
               <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">上一篇: {{ page.previous.title }}</a>
             </button>
+            </p>
           {% endif %}
           {% if page.next %}
+          	<p align="right">
             <button class="btn btn-outline" type="button">
               <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }}</a>
             </button>
+            </p>
           {% endif %}
         </ul>
     </div>
