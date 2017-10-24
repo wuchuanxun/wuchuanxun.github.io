@@ -57,3 +57,5 @@ v_t  = errvar(q);
 
 fidemo.qerrordemoplot(q,f_t,xi,mu_t,v_t,err) %plot errpdf and err relation
 ```
+
+[<button class="btn btn-outline" type="button">Next:FFT</button>](2017-10-24-FFT.md)
