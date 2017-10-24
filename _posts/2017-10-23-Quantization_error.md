@@ -59,5 +59,5 @@ fidemo.qerrordemoplot(q,f_t,xi,mu_t,v_t,err) %plot errpdf and err relation
 ```
 
 <p align="right">
-[<button class="btn btn-outline" type="button">Next:FFT</button>](/posts/2017-10-24-FFT.md)
+<button class="btn btn-outline" type="button" onclick=window.location.href="2017-10-24-FFT.md">Next:FFT</button>
 </p>
