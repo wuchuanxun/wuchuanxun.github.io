@@ -48,7 +48,7 @@ layout: default
     </div>
     <a>
       <p align="left">
-        <button class="btn btn-outline" type="button" onclick="location.href="{{page.previous_page_path}}">Pre: {{page.previous.title}}</button>
+        <button class="btn btn-outline" type="button" onclick="location.href='{{ BASE_PATH }}{{ page.previous.url }}'">Pre: {{page.previous.title}}</button>
       </p>
       <p align="right">
         <button class="btn btn-outline" type="button" onclick="location.href="{{page.next_page_path}}">Next: {{page.next.title}}</button>
