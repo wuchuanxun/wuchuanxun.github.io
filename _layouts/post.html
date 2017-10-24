@@ -43,7 +43,9 @@ layout: default
           {% endif %}
           {% if page.next %}
             {% if page.next.categories == page.categories %}
-              <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &raquo;</a></li>
+              <button class="btn btn-outline" type="button">
+                <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }}</a>
+              </button>
             {% endif %}
           {% endif %}
         </ul>
