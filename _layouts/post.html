@@ -33,19 +33,31 @@ layout: default
     {{ content }}
     </article>
     <div class="pagination">
+        {% set previous = page %}
+        {% for pg in pages %}
+            {% if pg.category == page.category %}
+                {% if pg.weight < page.weight %}
+                    {% set previous = pg %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
         <ul>
-          {% if page.previous %}
-            <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇: {{ page.previous.title }}</a></li>
-          {% else %}
-            <li class="prev disabled"><a>&laquo; 上一篇: 无</a></li>
+          {% if previous.category != page.category %}
+            <li class="prev"><a href="{{ BASE_PATH }}{{ previous.url }}" title="{{ previous.title }}">&laquo; 上一篇: {{ previous.title }}</a></li>
           {% endif %}
           {% if page.next %}
             <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &raquo;</a></li>
-          {% else %}
-            <li class="next disabled"><a>下一篇: 无 &raquo;</a>
           {% endif %}
         </ul>
     </div>
+    <a>
+      <p align="left">
+        <button class="btn btn-outline" type="button" onclick="location.href="{{page.previous_page_path}}">Pre: {{page.previous.title}}</button>
+      </p>
+      <p align="right">
+        <button class="btn btn-outline" type="button" onclick="location.href="{{page.next_page_path}}">Next: {{page.next.title}}</button>
+      </p>
+    </a>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
