@@ -32,12 +32,14 @@ layout: default
     <article class="article-content markdown-body">
     {{ content }}
     </article>
-    <p align="left">
-      <button class="btn btn-outline" type="button" onclick="location.href=page.prev">Pre:{{page.prev.title}}</button>
-    </p>
-    <p align="right">
-      <button class="btn btn-outline" type="button" onclick="location.href=page.next">Next:{{page.next.title}}</button>
-    </p>
+    <a>
+      <p align="left">
+        <button class="btn btn-outline" type="button" onclick="location.href="{{page.previous_page_path}}">Pre: {{page.prev.title}}</button>
+      </p>
+      <p align="right">
+        <button class="btn btn-outline" type="button" onclick="location.href="{{page.next_page_path}}">Next: {{page.next.title}}</button>
+      </p>
+    </a>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
