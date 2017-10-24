@@ -40,7 +40,21 @@ layout: default
             {% endif %}
         {% endif %}
     {% endfor %}
-    previous: {{previous.title}}
+    {% set nextpage = page %}
+    {% for pg in pages %}
+        {% if pg.category == page.category %}
+            {% if pg.weight > page.weight %}
+                {% set nextpage = pg %}
+                {% break %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <p align="left">
+      <button class="btn btn-outline" type="button" onclick="location.href='pre_page.html'">Pre:{{previous.title}}</button>
+    </p>
+    <p align="right">
+      <button class="btn btn-outline" type="button" onclick="location.href='next_page.html'">Next:{{nextpage.title}}</button>
+    </p>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
