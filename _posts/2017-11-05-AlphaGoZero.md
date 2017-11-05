@@ -15,8 +15,11 @@ keywords: Go,Reinforcement learning, Deep learning, MCTS
 AlphaGo Zero与前代不同之处主要有以下几个方面：
 
 > 仅仅通过自对弈的增强学习，从随机策略开始，没有使用人类经验
+>
 > 只用了黑白子的信息作为输入特征
+>
 > 只使用了单个神经网络同时输出策略和价值
+>
 > 使用了一个更加简洁的搜索树，没有rollout操作
 
 ## RL of AlphaGo Zero
