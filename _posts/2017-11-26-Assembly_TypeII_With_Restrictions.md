@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Assembly Type-II With Restrictions
+title: Assembly TypeII With Restrictions
 categories: [Assembly]
-description: Minimizing the Cycle Time in Two-Sided Assembly Lines with Assignment Restrictions: Improvements and a Simple Algorithm
-keywords: Two-Sided Assembly lines
+description: Minimizing the Cycle Time in Two Sided Assembly Lines with Assignment Restrictions Improvements and a Simple Algorithm
+keywords: Two Sided Assembly lines
 ---
 
 双边装配线里面一个基本的问题就是找到最佳节拍，解决了这个问题相当于解决了大部分的问题，因为求解思路基本是比较相近的。本篇我们讨论加入了一些约束，有一定的复杂性，要求算法可以很好的兼容约束。基本上目前的算法都是属于贪婪(Iterated Greedy)算法，为了收缩广大的搜索域。
