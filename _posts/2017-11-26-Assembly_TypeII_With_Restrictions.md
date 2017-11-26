@@ -103,7 +103,7 @@ $$
 
 其中NT表示station(j,k)已经分配的任务数目，$T_h$ 表示当前工作站分配的第h个任务。这个调整表明如果当前位置**至少存在一个PZ任务**，那么这个任务的权重就会上升，当然我们也无法保证PZ任务对一定能完全符合约束，只能在最大限度上保证。
 
-  ### Decoding Scheme(Priority based)
+### Decoding Scheme(Priority based)
 
 > 1. Set the initial cycle time $CT_{initial}$ 
 > 2. Open a new mated-station
@@ -194,7 +194,7 @@ $$
 
 ### Calibration(校准) of IG
 
-我们参数d和T的选择有以下两个范围 $d\in (4,8,12,16);\;\; T\in(0.1,0.5,1.0,5.0)$ 因为包含了不同的问题，所以我们每个问题都选择了最佳的参数。我们采用RDI来描述每个参数得到结果的好坏，完成了所有测试后，我们采用average RDI value of each case for statistical analysis. (每个的测试次数可选40次)
+我们参数d和T的选择有以下两个范围 $d\in (4,8,12,16);\;\; T0\in(0.1,0.5,1.0,5.0)$ 因为包含了不同的问题，所以我们每个问题都选择了最佳的参数。我们采用RDI来描述每个参数得到结果的好坏，完成了所有测试后，我们采用average RDI value of each case for statistical analysis. (每个的测试次数可选40次)
 
 $$
 Relative\;deviation\;index(RDI)=\frac{Sol-Best}{Worst-Best}\times 100\%
