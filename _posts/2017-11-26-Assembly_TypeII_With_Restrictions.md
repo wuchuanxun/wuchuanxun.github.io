@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Assembly Type-II With Restrictions
+title:  Assembly Type-II With Restrictions
 categories: [Assembly]
 description: Minimizing the Cycle Time in Two-Sided Assembly Lines with Assignment Restrictions: Improvements and a Simple Algorithm
 keywords: Two-Sided Assembly lines
